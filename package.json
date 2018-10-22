@@ -1,7 +1,8 @@
 {
-    "name"       : "rhinoJS/Support",
+    "name"       : "@rhinojs/support",
     "description": "rhinoJS Support Components",
-    "version"    : "0.0.1",
+    "version"    : "0.0.2",
+    "keywords"   : ["rhinojs", "framework", "support", "components"],
     "author"     : "Bruno Goncalves",
     "license"    : "MIT",
 
