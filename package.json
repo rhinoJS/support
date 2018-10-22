@@ -1,0 +1,14 @@
+{
+    "name"       : "rhinoJS/Support",
+    "description": "rhinoJS Support Components",
+    "version"    : "0.0.1",
+    "author"     : "Bruno Goncalves",
+    "license"    : "MIT",
+
+    "repository": {
+        "type" : "git",
+        "url" : "https://github.com/rhinoJS/support.git"
+    },
+
+    "main": "bootstrap.js"
+}
