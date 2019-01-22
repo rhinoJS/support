@@ -34,9 +34,14 @@ class Str
         return (match != null);
     }
 
+    /**
+     * Gerar string aleatória com um tamanho especifico.
+     * @param len
+     * @return {string}
+     */
     static randomStr(len) {
         len = len ? len : 16;
-        retun randomStr.generate(len);
+        return randomStr.generate(len);
     }
 }
 
