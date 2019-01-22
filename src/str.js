@@ -1,4 +1,6 @@
-    class Str
+var randomStr = require("randomstring");
+
+class Str
 {
     /**
      * Troca todas as ocorrencias da string.
@@ -30,6 +32,11 @@
         var match = er.exec(value);
 
         return (match != null);
+    }
+
+    static randomStr(len) {
+        len = len ? len : 16;
+        retun randomStr.generate(len);
     }
 }
 
