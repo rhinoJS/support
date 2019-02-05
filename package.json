@@ -1,5 +1,5 @@
 {
-    "name"        : "rhinojs-support",
+    "name"        : "@rhinojs/support",
     "description" : "rhinoJS Support Components",
     "version"     : "0.0.3",
     "keywords"    : [ "rhinojs", "framework", "support", "components" ],
