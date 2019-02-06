@@ -48,4 +48,4 @@ class Str
 /**
  * Exports.
  */
-module.exports.Str = Str;
+module.exports = Str;

@@ -1,4 +1,4 @@
-const Str = require('../src/str').Str;
+const Str = require('../src/str');
 
 console.info('Teste Str');
 console.info('----------------------------------');

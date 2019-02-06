@@ -51,4 +51,4 @@ class Arr {
     }
 }
 
-module.exports.Arr = Arr;
+module.exports = Arr;
