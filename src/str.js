@@ -26,7 +26,7 @@ class Str
             return false;
         }
 
-        pattern = Str.replaceAll('*', '.*', pattern);
+        pattern = Str.replaceAll('\\*', '.*', pattern);
 
         var er = new RegExp("^" + pattern + "$");
         var match = er.exec(value);
@@ -45,4 +45,7 @@ class Str
     }
 }
 
+/**
+ * Exports.
+ */
 module.exports.Str = Str;
