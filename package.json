@@ -1,22 +1,23 @@
 {
-    "name"        : "@rhinojs/support",
-    "description" : "rhinoJS Support Components",
-    "version"     : "0.0.5",
-    "keywords"    : [ "rhinojs", "framework", "support", "components" ],
-
-    "author"      : "Bruno Goncalves",
-    "license"     : "MIT",
-
-    "repository"  : {
+    "name": "@rhinojs/support",
+    "description": "rhinoJS Support Components",
+    "version": "0.1.0",
+    "keywords": [
+        "rhinojs",
+        "framework",
+        "support",
+        "components"
+    ],
+    "author": "Bruno Goncalves",
+    "license": "MIT",
+    "repository": {
         "type": "git",
-        "url" : "https://github.com/rhinoJS/support.git"
+        "url": "https://github.com/rhinoJS/support.git"
     },
-
     "dependencies": {
         "randomstring": "^1.1.5"
     },
-
-    "scripts"        : {
-        "deploy"     : "npm publish . --access-public"
+    "scripts": {
+        "deploy": "npm publish . --access-public"
     }
 }
