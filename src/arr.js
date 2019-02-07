@@ -1,54 +1,59 @@
-class Arr {
-    /**
-     * Exists key name in object.
-     *
-     * @param obj
-     * @param key
-     * @returns {boolean}
-     */
-    static exists(obj, key) {
-        const keys = Object.keys(obj);
-        return (keys.indexOf(key) >= 0);
+/**
+ * Objeto Arr.
+ */
+const Arr = {};
+
+/**
+ * Existe o key no objeto.
+ * 
+ * @param {object} obj Objeto onde será procurado o key
+ * @param {string} key Chave, nome da propriedade e ser buscada no obj
+ * @returns {boolean} Se key foi encontrado ou não
+ */
+Arr.exists = (obj, key) => {
+    return (Object.keys(obj).indexOf(key) >= 0);
+};
+
+/**
+ * Retorn um item an um array/object usando a notação "dot"
+ * 
+ * @param {object} obj
+ * @param {string} key
+ * @param {object} def Valor padrao quando não fo encontrado
+ * @returns {object} Valor encontrado pelo key no obj
+ */
+Arr.get = (obj, key, def = null) => {
+    // Verificar se eh um objeto
+    if (!(typeof obj === 'object')) {
+        return def;
     }
 
-    /**
-     * Get an item from an array using "dot" notation.
-     *
-     * @param obj
-     * @param key
-     * @param def
-     * @returns {*}
-     */
-    static get(obj, key, def) {
-        // Verificar se eh um objeto
-        if (!(typeof obj === 'object')) {
-            return def;
-        }
-
-        // Verificar se key foi nulo ou nao definido
-        if ((key == undefined) || (key == null)) {
-            return obj;
-        }
-
-        // Verificar se key existe
-        if (Arr.exists(obj, key)) {
-            return obj[key];
-        }
-
-        // Verificar se foi informado mult-niveis
-        var levels = key.split('.');
-        for (var i = 0; i < levels.length; i++) {
-            var seg = levels[i];
-            // Verificar se eh um objeto
-            if ((typeof obj === 'object') && Arr.exists(obj, seg)) {
-                obj = obj[seg];
-            } else {
-                return def;
-            }
-        }
-
+    // Verificar se key foi nulo ou nao definido
+    if ((key == undefined) || (key == null)) {
         return obj;
     }
-}
 
+    // Verificar se key existe
+    if (Arr.exists(obj, key)) {
+        return obj[key];
+    }
+
+    // Verificar se foi informado mult-niveis
+    var levels = key.split('.');
+    for (var i = 0; i < levels.length; i++) {
+        var seg = levels[i];
+        // Verificar se eh um objeto
+        if ((typeof obj === 'object') && Arr.exists(obj, seg)) {
+            obj = obj[seg];
+        } else {
+            return def;
+        }
+    }
+
+    return obj;
+};
+
+/**
+ * Exports.
+ */
 module.exports = Arr;

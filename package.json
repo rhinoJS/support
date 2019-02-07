@@ -12,8 +12,6 @@
         "url" : "https://github.com/rhinoJS/support.git"
     },
 
-    "main"        : "bootstrap.js",
-
     "dependencies": {
         "randomstring": "^1.1.5"
     },
