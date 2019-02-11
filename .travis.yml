@@ -1,0 +1,16 @@
+language: node_js
+
+node_js:
+  - '8.12.0'
+
+script: echo "Deploy project to NPM $(node -v) ..."
+
+jobs:
+  include:
+    - stage: npm release
+      node_js: "8"
+      script: echo "Deploying to npm ..."
+      deploy:
+        provider: npm
+        email: $NPM_EMAIL
+        api_key: $NPM_API_KEY
