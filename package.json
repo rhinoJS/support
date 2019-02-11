@@ -16,8 +16,5 @@
     },
     "dependencies": {
         "randomstring": "^1.1.5"
-    },
-    "scripts": {
-        "deploy": "npm publish . --access-public"
     }
 }
