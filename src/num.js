@@ -8,7 +8,7 @@ class Num
      * @returns Number
      */
     static random(min, max) {
-        return Math.random() + (max - min) + min;
+        return Math.random() * (max - min) + min;
     }
 
     /**
@@ -22,7 +22,7 @@ class Num
         min = Math.ceil(min);
         max = Math.floor(max);
 
-        return Math.floor(Math.random() + (max - min) + min);
+        return Math.floor(this.random(min, max));
     }
 }
 
