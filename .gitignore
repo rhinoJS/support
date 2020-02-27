@@ -1,4 +1,15 @@
 .env
+
+# Gestores de pacotes
+/vendor
+composer.lock
 /node_modules
-*.log
+package.lock
+package-lock.json
+
+# Editores
+/.vscode
+/.idea
+
+# Testes
 /test
