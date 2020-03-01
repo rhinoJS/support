@@ -48,6 +48,23 @@ Str.replaceAll = (search, replacement, value) => {
 }
 
 /**
+ * Upper case em todas as palavras da frase
+ * 
+ * @param {String} str
+ * @returns {String}
+ */
+Str.ucFirst = (str) => {
+    var ret = '';
+    var parts = str.split(' ');
+
+    for (var i = 0; i < parts.length; i++) {
+        ret += parts[i].charAt(0).toUpperCase() + parts[i].slice(1) + ' ';
+    }
+
+    return ret.trim();
+};
+
+/**
  * Exports.
  */
 module.exports = Str;
