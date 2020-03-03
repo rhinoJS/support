@@ -65,6 +65,21 @@ Str.ucFirst = (str) => {
 };
 
 /**
+ * Converte um valor para studly caps case.
+ * 
+ * @param {String} value
+ * @returns {String}
+ */
+Str.studly = (value) => {
+    value = Str.replaceAll('-', ' ', value);
+    value = Str.replaceAll('_', ' ', value);
+
+    value = Str.ucFirst(value);
+
+    return Str.replaceAll(' ', '', value).trim();
+};
+
+/**
  * Exports.
  */
 module.exports = Str;
