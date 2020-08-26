@@ -8,7 +8,10 @@
         "support",
         "components"
     ],
-    "author": "Bruno Goncalves",
+    "contributors": [
+        "Bruno Gonçalves",
+        "Tiago Gonçalves"
+    ],
     "license": "MIT",
     "repository": {
         "type": "git",
