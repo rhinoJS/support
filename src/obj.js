@@ -23,8 +23,8 @@ Obj.clone = (obj) => {
  */
 Obj.merge = (obj1, obj2) => {
 
-    var target = this.clone(obj1);
-    var obj    = this.clone(obj2);
+    var target = Obj.clone(obj1);
+    var obj    = Obj.clone(obj2);
 
     Object.assign(target, obj);
 
