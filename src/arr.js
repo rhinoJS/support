@@ -11,6 +11,10 @@ const Arr = {};
  * @returns {boolean} Se key foi encontrado ou não
  */
 Arr.exists = (obj, key) => {
+    if (obj == null) {
+        return false;
+    }
+
     return (Object.keys(obj).indexOf(key) >= 0);
 };
 
@@ -23,6 +27,10 @@ Arr.exists = (obj, key) => {
  * @returns {object} Valor encontrado pelo key no obj
  */
 Arr.get = (obj, key, def = null) => {
+    if (obj == null) {
+        return def;
+    }
+
     // Verificar se eh um objeto
     if (!(typeof obj === 'object')) {
         return def;
@@ -60,6 +68,10 @@ Arr.get = (obj, key, def = null) => {
  * @param {Function} cb Function callback
  */
 Arr.each = (obj, cb) => {
+    if (obj == null) {
+        return;
+    }
+    
     const keys = Object.keys(obj);
 
     for (let i = 0; i < keys.length; i++) {
