@@ -54,6 +54,22 @@ Arr.get = (obj, key, def = null) => {
 };
 
 /**
+ * Foreach de um objeto via key.
+ * 
+ * @param {Object} obj Objeto base
+ * @param {Function} cb Function callback
+ */
+Arr.each = (obj, cb) => {
+    const keys = Object.keys(obj);
+
+    for (let i = 0; i < keys.length; i++) {
+        const key = keys[i];
+        
+        cb(key, obj[key]);
+    }
+};
+
+/**
  * Exports.
  */
 module.exports = Arr;
