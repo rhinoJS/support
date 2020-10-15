@@ -77,8 +77,13 @@ Arr.each = (obj, cb) => {
     for (let i = 0; i < keys.length; i++) {
         const key = keys[i];
         
-        cb(key, obj[key]);
+        var ret = cb(key, obj[key]);
+        if ((ret !== null) && (ret !== undefined)) {
+            return ret;
+        }
     }
+
+    return;
 };
 
 /**
